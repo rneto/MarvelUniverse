@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+
+// Create a config with the default typography levels.
+$config: mat-typography-config();
+
+.header {
+  background-image: url('/assets/images/marvel.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 28px;
+}
+
+.header__content {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 0;
+  width: 90vw;
+  color: #ffffff;
+  background-image: linear-gradient(to right, rgba(15,15,15,.95) , rgba(15,15,15,.7));
+
+  transform: skew( -11deg);
+  -o-transform: skew(-11deg);
+  -moz-transform: skew(-11deg);
+  -webkit-transform: skew(-11deg);
+}
+
+h1 {
+  font-size:  mat-font-size($config, display-1);
+  font-weight: mat-font-weight($config, display-1);
+  line-height: mat-line-height($config, display-1);
+  margin: 15px 5px;
+}
+
+h2 {
+  font-size:  mat-font-size($config, title);
+  font-weight: mat-font-weight($config, title);
+  line-height: mat-line-height($config, title);
+  margin: 15px 5px 60px;
+}

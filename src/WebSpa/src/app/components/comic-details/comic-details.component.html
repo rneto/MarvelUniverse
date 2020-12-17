@@ -1,0 +1,21 @@
+<button mat-icon-button mat-dialog-close class="close-button" tabindex="-1">
+  <mat-icon>close</mat-icon>
+</button>
+
+<h1 mat-dialog-title>{{getTitle()}}</h1>
+<div mat-dialog-content>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="12px">
+    <div>
+      <img class="comic-image" alt="{{getTitle()}}" title="{{getTitle()}}" src="{{getImage()}}" width="550" height="834">
+    </div>
+    <div>
+      <div><strong>Published:</strong></div>
+      <div>{{getOnSale() | date}}</div>
+      <strong>Writer:</strong>
+      <p>{{getWriter().join(', ')}}</p>
+      <strong>Cover Artist:</strong>
+      <p>{{getCoverArtist().join(', ')}}</p>
+      <p>{{data.description}}</p>
+    </div>
+  </div>
+</div>
